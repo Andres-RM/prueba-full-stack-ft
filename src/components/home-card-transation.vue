@@ -21,10 +21,10 @@
           </template>
           <div class="py-4">
             <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-              Lorem ipsum
+              Actividad
             </h2>
             <div>
-              Lorem ipsum dolor sit amet, no nam oblique veritus.  alutandi sententiae.
+              {{ year.text}}
             </div>
           </div>
         </v-timeline-item>
@@ -41,23 +41,23 @@ export default {
     years: [
       {
         color: 'cyan',
-        year: '1960',
+        year: '10:14',
+        text: 'Registro de usuario'
       },
       {
         color: 'green',
-        year: '1970',
+        year: '12:30',
+        text: 'Edicion de un producto'
       },
       {
         color: 'pink',
-        year: '1980',
+        year: '02:13',
+        text: 'Registro de un producto'
       },
       {
         color: 'amber',
-        year: '1990',
-      },
-      {
-        color: 'orange',
-        year: '2000',
+        year: '04:45',
+        text: 'Eliminación de un producto'
       },
     ],
   }),
