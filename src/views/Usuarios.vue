@@ -15,11 +15,11 @@
             <v-btn color="primary" icon @click="openEdit(item)">
               <v-icon>mdi-account-edit</v-icon>
             </v-btn>
-            <v-btn color="secondary" icon v-if="item.status" @click="disableUser(item)">
-              <v-icon>mdi-lock</v-icon>
+            <v-btn color="success" icon v-if="item.status" @click="disableUser(item)">
+              <v-icon>mdi-lock-open-variant</v-icon>
             </v-btn>
-            <v-btn color="success" icon v-if="!item.status" @click="enableUser(item)">
-              <v-icon>mdi-unlock</v-icon>
+            <v-btn color="secondary" icon v-if="!item.status" @click="enableUser(item)">
+              <v-icon>mdi-lock</v-icon>
             </v-btn>
           </v-btn-toggle>
         </template>
