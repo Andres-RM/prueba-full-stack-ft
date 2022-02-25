@@ -8,8 +8,8 @@
     <v-card-text>
       <div style="height: 350px; width: 100%" class="d-flex justify-center align-center align-content-center">
         <div style="width: 100%;">
-          <p class="text-h3 text-center">200</p>
-          <p class="my-10 text-center" style="font-size: 30px; line-height: 32px">Activos activos de 1000 existentes</p>
+          <p class="text-h3 text-center">10</p>
+          <p class="my-10 text-center" style="font-size: 30px; line-height: 32px">Usuarios Registrados</p>
           <v-row justify="center">
             <v-btn color="primary" class="my-3" :to="{name: 'usuarios'}">
               Ver Usuarios
