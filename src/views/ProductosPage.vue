@@ -60,14 +60,16 @@
         </v-card-text>
       </v-card>
       <v-snackbar
+          v-model="mensajeCreate"
       >
-        Usuario Registrado
+        Producto Registrado
 
         <template v-slot:action="{ attrs }">
           <v-btn
               color="success"
               text
               v-bind="attrs"
+              @click="mensajeCreate = false"
           >
             Cerrar
           </v-btn>
@@ -112,14 +114,16 @@
         </v-card-text>
       </v-card>
       <v-snackbar
+          v-model="mensajeEditar"
       >
-        Usuario Registrado
+        Producto Editado
 
         <template v-slot:action="{ attrs }">
           <v-btn
               color="success"
               text
               v-bind="attrs"
+              @click="mensajeEditar = false"
           >
             Cerrar
           </v-btn>
@@ -178,7 +182,9 @@ export default {
       rule: [
         v => !!v || 'Es requerido',
       ],
-      loadingCreate: false
+      loadingCreate: false,
+      mensajeCreate: false,
+      mensajeEditar: false
     }
   },
   beforeMount() {
@@ -214,6 +220,7 @@ export default {
           .then(() => {
             this.loadData()
             this.$refs.createform.reset()
+            this.mensajeCreate = true
           }).finally(() => {
         this.loadingCreate = false
       })
@@ -248,7 +255,7 @@ export default {
       Axios.post('http://127.0.0.1:8000/api/product/' + this.idEdit, request)
           .then(() => {
             this.loadData()
-            this.$refs.editForm.reset()
+            this.mensajeEditar = true
           }).finally(() => {
         this.loadingCreate = false
       })
