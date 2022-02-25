@@ -34,7 +34,7 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block color="primary">
+          <v-btn block color="primary" @click="logout">
             Cerrar sesion
             <v-icon class="ml-2">mdi-logout</v-icon>
           </v-btn>
@@ -55,6 +55,12 @@ export default {
   data() {
     return {
       selectedItem: null
+    }
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('UserKeyToken')
+      this.$router.push({name: 'login'})
     }
   }
 }
