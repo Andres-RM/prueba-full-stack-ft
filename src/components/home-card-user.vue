@@ -11,7 +11,7 @@
           <p class="text-h3 text-center">200</p>
           <p class="my-10 text-center" style="font-size: 30px; line-height: 32px">Activos activos de 1000 existentes</p>
           <v-row justify="center">
-            <v-btn color="primary" class="my-3">
+            <v-btn color="primary" class="my-3" :to="{name: 'usuarios'}">
               Ver Usuarios
             </v-btn>
           </v-row>

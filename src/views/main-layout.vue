@@ -11,19 +11,19 @@
             v-model="selectedItem"
             color="primary"
         >
-          <v-list-item>
+          <v-list-item :to="{name: 'home'}" exact>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item :to="{name: 'productos'}" exact>
             <v-list-item-icon>
               <v-icon>mdi-clipboard-list</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Lista de Productos</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item :to="{name: 'usuarios'}" exact>
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>

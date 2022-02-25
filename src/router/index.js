@@ -4,6 +4,8 @@ import HomeView from '../views/HomeView.vue'
 import Layout from "../views/main-layout.vue";
 import Login from "../views/Login";
 import Usuarios from "../views/Usuarios";
+import Produtos from "../views/ProductosPage";
+
 
 
 Vue.use(VueRouter)
@@ -12,15 +14,21 @@ const routes = [
     {
         path: '/',
         component: Layout,
-        children: [{
-            path: '',
-            name: 'home',
-            component: HomeView
-        },
+        children: [
+            {
+                path: '',
+                name: 'home',
+                component: HomeView
+            },
             {
                 path: '/usuarios',
                 component: Usuarios,
                 name: 'usuarios'
+            },
+            {
+                path: '/productos',
+                component: Produtos,
+                name: 'productos'
             }
         ]
     },

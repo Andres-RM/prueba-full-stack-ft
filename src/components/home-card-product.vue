@@ -16,7 +16,7 @@
       </v-row>
       <p class="my-10 text-center" style="font-size: 30px; line-height: 32px">Productos activos de 1000 existentes</p>
       <v-row justify="center">
-        <v-btn color="primary">
+        <v-btn color="primary" :to="{name: 'productos'}">
           Ver productos
         </v-btn>
       </v-row>
